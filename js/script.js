@@ -1,3 +1,4 @@
+(function () {
 var ms = 0, ss = 0, mm = 0, hh = 0; 
 
 ss = '0' + ss;
@@ -56,6 +57,10 @@ function startTimer() {
        ss = 0;
        mm = 0;
        hh = 0;
+       
+       ss = '0' + ss;
+       mm = '0' + mm;
+       hh = '0' + hh;
 
        main_time.innerHTML ='00:00:00';
     }
@@ -67,14 +72,14 @@ function start() {
     if ( count === 1 ) {
 
 	  btn_start.innerHTML = "Stop"; 
-      btn_start.classList.remove('btn-success');
+    btn_start.classList.remove('btn-success');
 	  btn_start.classList.add('btn-info');
 	  timerId = setInterval(startTimer,1);
 
     } else {
 
 	   clearInterval(timerId);
-       btn_start.innerHTML = "Start"; 
+     btn_start.innerHTML = "Start"; 
 	   btn_start.classList.remove('btn-info');
 	   btn_start.classList.add('btn-success');
 	   count = 0;
@@ -86,21 +91,25 @@ function clear() {
 	 clearInterval(timerId);
 	  count = 0;
 	  ss = 0;
-      mm = 0;
-      hh = 0;
-      ms = 0;
+    mm = 0;
+    hh = 0;
+    ms = 0;
+      
+    ss = '0' + ss;
+    mm = '0' + mm;
+    hh = '0' + hh;
 
-     milisec.innerHTML = ms;
+    milisec.innerHTML = ms;
 
-     main_time.innerHTML ='00:00:00';
+    main_time.innerHTML ='00:00:00';
 
    
-     btn_start.innerHTML = "Start"; 
-     btn_start.classList.remove('btn-info');
-	 btn_start.classList.add('btn-success');
+    btn_start.innerHTML = "Start"; 
+    btn_start.classList.remove('btn-info');
+	  btn_start.classList.add('btn-success');
 
 };
 
 document.getElementById('btn-start').addEventListener('click',start);
 document.getElementById('btn-clear').addEventListener("click",clear);
-
+}) ();
