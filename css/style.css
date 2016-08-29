@@ -1,0 +1,51 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.wrapper {
+	width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 150px;
+    border-color: red;
+    border-width: 5px;
+}
+
+.block-time{
+	margin-left: 300px;
+	margin-right: 300px;
+	background-color: #E8EBEB;
+	color:#000;
+	border-radius: 15px;
+	border: 5px solid #000;
+}
+.main-time {
+	font-size:60px;
+	margin-bottom: 0px;
+	line-height: 55px;
+}
+
+.milisec-right {
+	padding-right: 70px;
+	text-align: right;
+	font-size: 24px;
+}
+
+.block-button {
+	margin-top: 20px;
+}
+
+.btn{
+    color:#000;
+    font-weight: bold;
+	font-size:24px;
+    border-color: black;
+    border-width: 5px;
+}
